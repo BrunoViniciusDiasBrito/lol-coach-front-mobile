@@ -2,10 +2,10 @@ import { Pressable, StyleSheet, Text } from 'react-native'
 // import { Button} from 'react-native-paper'
 import { myTheme } from '../../app/theme'
 
-export const GenericButton = ({name, color, style, onPress}) => {
+export const GenericButton = ({name, color, style, stylePressed, onPress}) => {
   return (
     <Pressable
-      style={ ({pressed}) => [pressed && btnStyle.pressed, btnStyle.base, style]} 
+      style={ ({pressed}) => [pressed ? stylePressed : null, btnStyle.base, style]}
       onPress={onPress}
       android_ripple={{color: color * 2.5}}
     >
@@ -28,7 +28,4 @@ const btnStyle = StyleSheet.create({
     color: myTheme.colors.white,
     textAlign: 'center'
   },
-  pressed: {
-    opacity: 0.8
-  }
 })

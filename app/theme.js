@@ -21,6 +21,7 @@ export const myTheme = {
       loss: '#EA4335',
       error: '#EF4444',
     },
+    none: 'transparent'
   },
   typography: {
     poppins: 'Poppins',

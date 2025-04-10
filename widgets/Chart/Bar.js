@@ -6,11 +6,6 @@ export const Bar = ({data}) => {
   return (
     <View style={styles.container}>
        <BarChart
-        // showLine={true}
-        // lineConfig={{
-        //   color: 'white',
-        //   textColor: 'white',
-        // }}
         barWidth={22}
         barBorderRadius={4}
         frontColor={myTheme.colors.blue[500]}
@@ -29,7 +24,7 @@ export const Bar = ({data}) => {
         }}
         rulesType='solid'
         sideColor={myTheme.colors.blue[500]}
-        rulesColor={'transparent'}
+        rulesColor={myTheme.colors.none}
        />
     </View>
   )

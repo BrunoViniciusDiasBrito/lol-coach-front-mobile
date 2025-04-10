@@ -1,8 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../../features/home/page';
-import Matches from '../../features/matches/page';
+import Home from '../../pages/home/page';
+import Matches from '../../pages/matches/pages';
 import { Icon } from 'react-native-paper';
 import { myTheme } from '../theme';
+import { Champions } from '../../pages/champions/page';
+import { Coach } from '../../pages/coach/page';
 
 const Tab  = createBottomTabNavigator()
 
@@ -45,7 +47,7 @@ export const PublicRoutes = () => {
 
       <Tab.Screen
         name='Champions'
-        component={Matches}
+        component={Champions}
         options={{
           title: 'Champions',
           tabBarIcon: ({color}) => (
@@ -56,7 +58,7 @@ export const PublicRoutes = () => {
 
       <Tab.Screen
         name='Coaching'
-        component={Matches}
+        component={Coach}
         options={{
           title: 'Coaching',
           tabBarIcon: ({color}) => (

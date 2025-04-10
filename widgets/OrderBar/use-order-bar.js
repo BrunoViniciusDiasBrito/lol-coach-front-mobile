@@ -31,7 +31,7 @@ export const useOrderBar = (cols) => {
   // const [state, dispatch] = useReducer(reducer, {staus: '', tag: 'none'})
   const [colsSorted, setColsSorted] = useState(cols)
 
-  const orderHandler = (col) => {
+  const orderHandler = (col) => { // função para a pagina controlar - refac
     setColsSorted(prevCols => {
       const newPrevCols = prevCols.map(prevCol => {
         if (prevCol.status === 'ativo') {
